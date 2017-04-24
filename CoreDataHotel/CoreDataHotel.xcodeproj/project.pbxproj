@@ -16,6 +16,7 @@
 		71706A0D1EAE6D2C007CA360 /* AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 71706A0C1EAE6D2C007CA360 /* AutoLayout.m */; };
 		71706A131EAE9554007CA360 /* hotels.json in Resources */ = {isa = PBXBuildFile; fileRef = 71706A121EAE9554007CA360 /* hotels.json */; };
 		71706A161EAEA486007CA360 /* HotelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71706A151EAEA486007CA360 /* HotelsViewController.m */; };
+		71706A191EAEA9FC007CA360 /* RoomsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71706A181EAEA9FC007CA360 /* RoomsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		71706A121EAE9554007CA360 /* hotels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hotels.json; sourceTree = "<group>"; };
 		71706A141EAEA486007CA360 /* HotelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelsViewController.h; sourceTree = "<group>"; };
 		71706A151EAEA486007CA360 /* HotelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelsViewController.m; sourceTree = "<group>"; };
+		71706A171EAEA9FC007CA360 /* RoomsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomsViewController.h; sourceTree = "<group>"; };
+		71706A181EAEA9FC007CA360 /* RoomsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				717069F81EAE5F1D007CA360 /* ViewController.m */,
 				71706A141EAEA486007CA360 /* HotelsViewController.h */,
 				71706A151EAEA486007CA360 /* HotelsViewController.m */,
+				71706A171EAEA9FC007CA360 /* RoomsViewController.h */,
+				71706A181EAEA9FC007CA360 /* RoomsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 				717069FF1EAE5F1D007CA360 /* CoreDataHotel.xcdatamodeld in Sources */,
 				717069F61EAE5F1D007CA360 /* AppDelegate.m in Sources */,
 				71706A161EAEA486007CA360 /* HotelsViewController.m in Sources */,
+				71706A191EAEA9FC007CA360 /* RoomsViewController.m in Sources */,
 				717069F31EAE5F1D007CA360 /* main.m in Sources */,
 				71706A0D1EAE6D2C007CA360 /* AutoLayout.m in Sources */,
 			);
