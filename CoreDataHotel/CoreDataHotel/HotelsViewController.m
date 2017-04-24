@@ -7,11 +7,14 @@
 //
 
 #import "HotelsViewController.h"
+#import "AutoLayout.h"
 
 #import "AppDelegate.h"
 
 #import "Hotel+CoreDataClass.h"
 #import "Hotel+CoreDataProperties.h"
+
+#import "ViewController.h"
 
 @interface HotelsViewController () <UITableViewDataSource>
 
@@ -26,7 +29,48 @@
 - (void)loadView{
     [super loadView];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self.view addSubview:_tableView];
+    
+    [self setupLayout];
+    
     //add tableView as subview and apply constraints
+}
+
+- (void)setupLayout{
+    UIButton *cancelButton = [self createButtonWithTitle:@"Cancel"];
+    
+    cancelButton.backgroundColor = [UIColor colorWithRed:0.0 green:1.0 blue:0.75 alpha:1.0];
+    
+    [AutoLayout leadingConstraintFrom:cancelButton toView:self.view];
+    [AutoLayout trailingConstraintFrom:cancelButton toView:self.view];
+    
+    [AutoLayout equalHeightConstraintFromView:cancelButton
+                                       toView:self.view
+                               withMultiplier:0.33];
+    
+    
+    [cancelButton addTarget:self action:@selector(cancelButtonSelected) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)cancelButtonSelected{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (UIButton *)createButtonWithTitle:(NSString *)title{
+    
+    UIButton *button = [[UIButton alloc]init];
+    
+    [button setTitle:title forState:normal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    [button setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    [self.view addSubview:button];
+    
+    return button;
+    
 }
 
 - (void)viewDidLoad {
