@@ -26,6 +26,8 @@
 
 - (void)setupLayout{
     
+    float navBarHeight = CGRectGetHeight(self.navigationController.navigationBar.frame);
+    
     UIButton *browseButton = [self createButtonWithTitle:@"Browse"];
     UIButton *bookButton = [self createButtonWithTitle:@"Book"];
     UIButton *lookupButton = [self createButtonWithTitle:@"Look Up"];
