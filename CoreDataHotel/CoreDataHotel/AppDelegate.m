@@ -71,7 +71,7 @@
             newHotel.stars = (NSInteger)hotel[@"stars"];
             
             for (NSDictionary *room in hotel[@"rooms"]) {
-                
+                NSLog(@"%@", room);
                 Room *newRoom = [NSEntityDescription insertNewObjectForEntityForName:@"Room" inManagedObjectContext:self.persistentContainer.viewContext];
                 
                 newRoom.number = (NSInteger)room[@"number"];

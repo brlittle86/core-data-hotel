@@ -58,29 +58,10 @@
     
     self.tableView.dataSource = self;
     
-}
-
-- (NSArray *)allRooms{
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     
-    if (!_allRooms) {
-        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
-        
-        NSManagedObjectContext *context = appDelegate.persistentContainer.viewContext;
-        
-        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Room"];
-        
-        NSError *fetchError;
-        
-        NSArray *rooms = [context executeFetchRequest:request error:&fetchError];
-        
-        if (fetchError) {
-            NSLog(@"There was an error fetching rooms from the Core Data!");
-        }
-        
-        _allRooms = rooms;
-    }
+    self.allRooms = [[self.currentHotel rooms] allObjects];
     
-    return _allRooms;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -89,15 +70,16 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
     }
     
-    Room *room = self.allRooms[indexPath.row];
-    NSNumber *roomNumber = [[NSNumber alloc]initWithInt:room.number];
-    cell.textLabel.text = [[NSString alloc]initWithFormat:@"%@", roomNumber];
+    Room *room = [self.allRooms objectAtIndex:indexPath.row];
+//    NSLog(@"%hd", room.number);
+//    NSNumber *roomNumber = [[NSNumber alloc]initWithUnsignedShort:room.number];
+    cell.textLabel.text = [NSString stringWithFormat:@"%hd",room.number];
     
     return cell;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _allRooms.count;
+    return self.allRooms.count;
 }
 
 @end

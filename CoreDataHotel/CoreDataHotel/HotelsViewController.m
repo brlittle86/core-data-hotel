@@ -88,6 +88,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     RoomsViewController *newRoomsView = [[RoomsViewController alloc]init];
+    newRoomsView.currentHotel = self.allHotels[indexPath.row];
     
     [self.navigationController pushViewController:newRoomsView animated:YES];
 }
