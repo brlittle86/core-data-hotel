@@ -78,6 +78,8 @@
                 newRoom.beds = (NSInteger)room[@"beds"];
                 newRoom.rate = (NSInteger)room[@"rate"];
                 
+                newRoom.hotel = newHotel;
+                
             }
         }
         

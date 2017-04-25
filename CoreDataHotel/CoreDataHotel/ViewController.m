@@ -40,7 +40,7 @@
     
     [AutoLayout equalHeightConstraintFromView:browseButton
                                        toView:self.view
-                               withMultiplier:0.33];
+                               withMultiplier:0.2];
     
     [browseButton addTarget:self action:@selector(browseButtonSelected) forControlEvents:UIControlEventTouchUpInside];
     
@@ -49,7 +49,7 @@
 - (void)browseButtonSelected{
     HotelsViewController *newHotelsView = [[HotelsViewController alloc]init];
     
-    [self presentViewController:newHotelsView animated:YES completion:nil];
+    [self.navigationController pushViewController:newHotelsView animated:YES];
 }
 
 - (UIButton *)createButtonWithTitle:(NSString *)title{
