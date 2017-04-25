@@ -21,7 +21,7 @@
                                                                              metrics:nil
                                                                                views:viewDictionary];
     
-    NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[view]|"
+    NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[view]|"
                                                                              options:0
                                                                              metrics:nil
                                                                                views:viewDictionary];

@@ -10,6 +10,8 @@
 
 #import "AppDelegate.h"
 
+#import "AutoLayout.h"
+
 #import "Room+CoreDataClass.h"
 #import "Room+CoreDataProperties.h"
 
@@ -24,12 +26,31 @@
 @implementation RoomsViewController
 
 - (void)loadView{
-    
     [super loadView];
     
+    self.view.backgroundColor = [UIColor whiteColor];
     
+    self.tableView = [[UITableView alloc] init];
+    
+    self.tableView.dataSource = self;
+    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    
+    self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [self.view addSubview:self.tableView];
+    
+    [AutoLayout fullScreenConstraintsWithVFLForView:self.tableView];
+    
+    [self setupLayout];
+    
+    //add tableView as subview and apply constraints
+}
+
+- (void)setupLayout{
     
 }
+
 
 - (void)viewDidLoad {
     
@@ -39,11 +60,38 @@
     
 }
 
+- (NSArray *)allRooms{
+    
+    if (!_allRooms) {
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+        
+        NSManagedObjectContext *context = appDelegate.persistentContainer.viewContext;
+        
+        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Room"];
+        
+        NSError *fetchError;
+        
+        NSArray *rooms = [context executeFetchRequest:request error:&fetchError];
+        
+        if (fetchError) {
+            NSLog(@"There was an error fetching rooms from the Core Data!");
+        }
+        
+        _allRooms = rooms;
+    }
+    
+    return _allRooms;
+}
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
     }
+    
+    Room *room = self.allRooms[indexPath.row];
+    NSNumber *roomNumber = [[NSNumber alloc]initWithInt:room.number];
+    cell.textLabel.text = [[NSString alloc]initWithFormat:@"%@", roomNumber];
     
     return cell;
 }
