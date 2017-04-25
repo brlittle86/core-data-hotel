@@ -11,13 +11,15 @@
 
 #import "AppDelegate.h"
 
+#import "BookViewController.h"
+
 #import "Reservation+CoreDataClass.h"
 #import "Reservation+CoreDataProperties.h"
 
 #import "Room+CoreDataClass.h"
 #import "Room+CoreDataProperties.h"
 
-@interface AvailabilityViewController () <UITableViewDataSource>
+@interface AvailabilityViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property(strong, nonatomic)UITableView *tableView;
 
@@ -83,12 +85,22 @@
     [self.view addSubview:self.tableView];
     
     self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     
     [self.tableView setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     [AutoLayout fullScreenConstraintsWithVFLForView:self.tableView];
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    BookViewController *newBookView = [[BookViewController alloc]init];
+    newBookView.startDate = self.startDate;
+    newBookView.endDate = self.endDate;
+    newBookView.selectedRoom = self.availableRooms[indexPath.row];
+    
+    [self.navigationController pushViewController:newBookView animated:YES];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
