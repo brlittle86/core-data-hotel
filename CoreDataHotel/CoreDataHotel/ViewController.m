@@ -39,8 +39,6 @@
     UIButton *lookupButton = [self createButtonWithTitle:@"Look Up"];
     lookupButton.backgroundColor = [UIColor colorWithRed:0.75 green:0.75 blue:1.0 alpha:1.0];
     
-    
-//    float navBarHeight = CGRectGetHeight(self.navigationController.navigationBar.frame);
     CGFloat statusBarHeight = 20.0;
     CGFloat topMargin = navBarHeight + statusBarHeight;
     CGFloat windowHeight = self.view.frame.size.height;
@@ -53,10 +51,13 @@
     NSString *visualFormatString = @"V:|-topMargin-[browseButton(==buttonHeight)][bookButton(==browseButton)][lookupButton(==browseButton)]|";
     
     [AutoLayout constraintsWithVFLForViewDictionary:viewDictionary forMetricsDictionary:metricsDictionary withOptions:0 withVisualFormat:visualFormatString];
+    
     [AutoLayout leadingConstraintFrom:browseButton toView:self.view];
     [AutoLayout trailingConstraintFrom:browseButton toView:self.view];
+    
     [AutoLayout leadingConstraintFrom:bookButton toView:self.view];
     [AutoLayout trailingConstraintFrom:bookButton toView:self.view];
+    
     [AutoLayout leadingConstraintFrom:lookupButton toView:self.view];
     [AutoLayout trailingConstraintFrom:lookupButton toView:self.view];
     
