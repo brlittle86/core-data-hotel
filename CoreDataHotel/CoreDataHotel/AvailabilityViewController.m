@@ -113,7 +113,7 @@
     
     Room *currentRoom = self.availableRooms[indexPath.row];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%i", currentRoom.number];
+    cell.textLabel.text = [NSString stringWithFormat:@"Room: %i (%i beds, $%0.2f per night)", currentRoom.number, currentRoom.beds, currentRoom.rate];
     
     return cell;
 }

@@ -8,12 +8,19 @@
 
 #import "BookViewController.h"
 #import "AutoLayout.h"
+#import "AppDelegate.h"
 
 #import "Room+CoreDataClass.h"
 #import "Room+CoreDataProperties.h"
 
 #import "Hotel+CoreDataClass.h"
 #import "Hotel+CoreDataProperties.h"
+
+#import "Reservation+CoreDataClass.h"
+#import "Reservation+CoreDataProperties.h"
+
+#import "Guest+CoreDataClass.h"
+#import "Guest+CoreDataProperties.h"
 
 @interface BookViewController ()
 
@@ -45,6 +52,30 @@
 }
 
 - (void)doneButtonPressed{
+    
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = appDelegate.persistentContainer.viewContext;
+    
+    Reservation *reservation = [NSEntityDescription insertNewObjectForEntityForName:@"Reservation" inManagedObjectContext:context];
+    
+    reservation.startDate = self.startDate;
+    reservation.endDate = self.endDate;
+    reservation.room = self.selectedRoom;
+    
+    self.selectedRoom.reservation = reservation;
+    
+    reservation.guest = [NSEntityDescription insertNewObjectForEntityForName:@"Guest" inManagedObjectContext:context];
+    reservation.guest.firstName = firstNameField.text;
+    
+    NSError *saveError;
+    [context save:&saveError];
+    
+    if (saveError) {
+        NSLog(@"Save error is %@", saveError);
+    } else {
+        NSLog(@"Save reservation successful!");
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
     
 }
 
