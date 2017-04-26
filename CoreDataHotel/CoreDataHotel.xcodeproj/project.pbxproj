@@ -17,6 +17,9 @@
 		71706A131EAE9554007CA360 /* hotels.json in Resources */ = {isa = PBXBuildFile; fileRef = 71706A121EAE9554007CA360 /* hotels.json */; };
 		71706A161EAEA486007CA360 /* HotelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71706A151EAEA486007CA360 /* HotelsViewController.m */; };
 		71706A191EAEA9FC007CA360 /* RoomsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71706A181EAEA9FC007CA360 /* RoomsViewController.m */; };
+		717746E31EAFBC8600FDD223 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717746E21EAFBC8600FDD223 /* DatePickerViewController.m */; };
+		717746E61EAFCF8000FDD223 /* AvailabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717746E51EAFCF8000FDD223 /* AvailabilityViewController.m */; };
+		717746E91EB00ADB00FDD223 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717746E81EB00ADB00FDD223 /* BookViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,12 @@
 		71706A151EAEA486007CA360 /* HotelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelsViewController.m; sourceTree = "<group>"; };
 		71706A171EAEA9FC007CA360 /* RoomsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomsViewController.h; sourceTree = "<group>"; };
 		71706A181EAEA9FC007CA360 /* RoomsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomsViewController.m; sourceTree = "<group>"; };
+		717746E11EAFBC8600FDD223 /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
+		717746E21EAFBC8600FDD223 /* DatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerViewController.m; sourceTree = "<group>"; };
+		717746E41EAFCF8000FDD223 /* AvailabilityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvailabilityViewController.h; sourceTree = "<group>"; };
+		717746E51EAFCF8000FDD223 /* AvailabilityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvailabilityViewController.m; sourceTree = "<group>"; };
+		717746E71EB00ADB00FDD223 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
+		717746E81EB00ADB00FDD223 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +113,18 @@
 		71706A0F1EAE6D50007CA360 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				717069F71EAE5F1D007CA360 /* ViewController.h */,
-				717069F81EAE5F1D007CA360 /* ViewController.m */,
+				717746E41EAFCF8000FDD223 /* AvailabilityViewController.h */,
+				717746E51EAFCF8000FDD223 /* AvailabilityViewController.m */,
+				717746E71EB00ADB00FDD223 /* BookViewController.h */,
+				717746E81EB00ADB00FDD223 /* BookViewController.m */,
+				717746E11EAFBC8600FDD223 /* DatePickerViewController.h */,
+				717746E21EAFBC8600FDD223 /* DatePickerViewController.m */,
 				71706A141EAEA486007CA360 /* HotelsViewController.h */,
 				71706A151EAEA486007CA360 /* HotelsViewController.m */,
 				71706A171EAEA9FC007CA360 /* RoomsViewController.h */,
 				71706A181EAEA9FC007CA360 /* RoomsViewController.m */,
+				717069F71EAE5F1D007CA360 /* ViewController.h */,
+				717069F81EAE5F1D007CA360 /* ViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -193,9 +208,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				717746E31EAFBC8600FDD223 /* DatePickerViewController.m in Sources */,
 				717069F91EAE5F1D007CA360 /* ViewController.m in Sources */,
 				717069FF1EAE5F1D007CA360 /* CoreDataHotel.xcdatamodeld in Sources */,
 				717069F61EAE5F1D007CA360 /* AppDelegate.m in Sources */,
+				717746E61EAFCF8000FDD223 /* AvailabilityViewController.m in Sources */,
+				717746E91EB00ADB00FDD223 /* BookViewController.m in Sources */,
 				71706A161EAEA486007CA360 /* HotelsViewController.m in Sources */,
 				71706A191EAEA9FC007CA360 /* RoomsViewController.m in Sources */,
 				717069F31EAE5F1D007CA360 /* main.m in Sources */,
@@ -354,6 +372,7 @@
 				71706A0A1EAE5F1D007CA360 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
