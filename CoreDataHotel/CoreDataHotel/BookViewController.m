@@ -24,6 +24,10 @@
 
 @interface BookViewController ()
 
+@property(strong, nonatomic)UITextField *firstNameField;
+@property(strong, nonatomic)UITextField *lastNameField;
+@property(strong, nonatomic)UITextField *emailField;
+
 @end
 
 @implementation BookViewController
@@ -65,7 +69,9 @@
     self.selectedRoom.reservation = reservation;
     
     reservation.guest = [NSEntityDescription insertNewObjectForEntityForName:@"Guest" inManagedObjectContext:context];
-    reservation.guest.firstName = firstNameField.text;
+    reservation.guest.firstName = self.firstNameField.text;
+    reservation.guest.lastName = self.lastNameField.text;
+    reservation.guest.email = self.emailField.text;
     
     NSError *saveError;
     [context save:&saveError];
