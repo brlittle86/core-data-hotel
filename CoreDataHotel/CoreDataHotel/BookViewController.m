@@ -49,7 +49,9 @@
 
 - (void)setupDoneButton{
     
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonPressed)];
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                               target:self
+                                                                               action:@selector(doneButtonPressed)];
     
     [self.navigationItem setRightBarButtonItem:doneButton];
     
@@ -66,7 +68,7 @@
     reservation.endDate = self.endDate;
     reservation.room = self.selectedRoom;
     
-    self.selectedRoom.reservation = reservation;
+    self.selectedRoom.reservation = [self.selectedRoom.reservation setByAddingObject:reservation];
     
     reservation.guest = [NSEntityDescription insertNewObjectForEntityForName:@"Guest" inManagedObjectContext:context];
     reservation.guest.firstName = self.firstNameField.text;
@@ -120,9 +122,14 @@
     CGFloat windowHeight = self.view.frame.size.height;
     CGFloat frameHeight = ((windowHeight - topMargin) / 10);
     
-    NSDictionary *viewDictionary = @{@"hotelName": hotelName, @"roomNumber": roomNumber, @"firstNameField": firstNameField, @"lastNameField": lastNameField, @"emailField": emailField};
+    NSDictionary *viewDictionary = @{@"hotelName": hotelName,
+                                     @"roomNumber": roomNumber,
+                                     @"firstNameField": firstNameField,
+                                     @"lastNameField": lastNameField,
+                                     @"emailField": emailField};
     
-    NSDictionary *metricsDictionary = @{@"topMargin": [NSNumber numberWithFloat:topMargin], @"frameHeight": [NSNumber numberWithFloat:frameHeight]};
+    NSDictionary *metricsDictionary = @{@"topMargin": [NSNumber numberWithFloat:topMargin],
+                                        @"frameHeight": [NSNumber numberWithFloat:frameHeight]};
     
     NSString *visualFormatString = @"V:|-topMargin-[hotelName(==frameHeight)][roomNumber(==frameHeight)]-[firstNameField(==frameHeight)]-[lastNameField(==firstNameField)]-[emailField(==firstNameField)]";
     

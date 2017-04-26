@@ -44,13 +44,19 @@
     CGFloat windowHeight = self.view.frame.size.height;
     CGFloat buttonHeight = ((windowHeight - topMargin) / 3);
     
-    NSDictionary *viewDictionary = @{@"browseButton": browseButton, @"bookButton": bookButton, @"lookupButton": lookupButton};
+    NSDictionary *viewDictionary = @{@"browseButton": browseButton,
+                                     @"bookButton": bookButton,
+                                     @"lookupButton": lookupButton};
     
-    NSDictionary *metricsDictionary = @{@"topMargin": [NSNumber numberWithFloat:topMargin], @"buttonHeight": [NSNumber numberWithFloat:buttonHeight]};
+    NSDictionary *metricsDictionary = @{@"topMargin": [NSNumber numberWithFloat:topMargin],
+                                        @"buttonHeight": [NSNumber numberWithFloat:buttonHeight]};
     
     NSString *visualFormatString = @"V:|-topMargin-[browseButton(==buttonHeight)][bookButton(==browseButton)][lookupButton(==browseButton)]|";
     
-    [AutoLayout constraintsWithVFLForViewDictionary:viewDictionary forMetricsDictionary:metricsDictionary withOptions:0 withVisualFormat:visualFormatString];
+    [AutoLayout constraintsWithVFLForViewDictionary:viewDictionary
+                               forMetricsDictionary:metricsDictionary
+                                        withOptions:0
+                                   withVisualFormat:visualFormatString];
     
     [AutoLayout leadingConstraintFrom:browseButton toView:self.view];
     [AutoLayout trailingConstraintFrom:browseButton toView:self.view];
