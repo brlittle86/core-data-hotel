@@ -21,6 +21,7 @@
 		717746E61EAFCF8000FDD223 /* AvailabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717746E51EAFCF8000FDD223 /* AvailabilityViewController.m */; };
 		717746E91EB00ADB00FDD223 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717746E81EB00ADB00FDD223 /* BookViewController.m */; };
 		717746F91EB1145500FDD223 /* AutoLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 717746F81EB1145500FDD223 /* AutoLayoutTests.m */; };
+		71D8C2471EB1528700FEA1F3 /* LookupReservationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D8C2461EB1528700FEA1F3 /* LookupReservationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		717746EE1EB111D400FDD223 /* CoreDataHotelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataHotelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		717746F21EB111D400FDD223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		717746F81EB1145500FDD223 /* AutoLayoutTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutTests.m; sourceTree = "<group>"; };
+		71D8C2451EB1528700FEA1F3 /* LookupReservationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LookupReservationViewController.h; sourceTree = "<group>"; };
+		71D8C2461EB1528700FEA1F3 /* LookupReservationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookupReservationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +147,8 @@
 				717746E21EAFBC8600FDD223 /* DatePickerViewController.m */,
 				71706A141EAEA486007CA360 /* HotelsViewController.h */,
 				71706A151EAEA486007CA360 /* HotelsViewController.m */,
+				71D8C2451EB1528700FEA1F3 /* LookupReservationViewController.h */,
+				71D8C2461EB1528700FEA1F3 /* LookupReservationViewController.m */,
 				71706A171EAEA9FC007CA360 /* RoomsViewController.h */,
 				71706A181EAEA9FC007CA360 /* RoomsViewController.m */,
 				717069F71EAE5F1D007CA360 /* ViewController.h */,
@@ -276,6 +281,7 @@
 				717069F91EAE5F1D007CA360 /* ViewController.m in Sources */,
 				717069FF1EAE5F1D007CA360 /* CoreDataHotel.xcdatamodeld in Sources */,
 				717069F61EAE5F1D007CA360 /* AppDelegate.m in Sources */,
+				71D8C2471EB1528700FEA1F3 /* LookupReservationViewController.m in Sources */,
 				717746E61EAFCF8000FDD223 /* AvailabilityViewController.m in Sources */,
 				717746E91EB00ADB00FDD223 /* BookViewController.m in Sources */,
 				71706A161EAEA486007CA360 /* HotelsViewController.m in Sources */,
@@ -487,6 +493,7 @@
 				717746F71EB111D400FDD223 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
