@@ -96,6 +96,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     BookViewController *newBookView = [[BookViewController alloc]init];
+    
     newBookView.startDate = self.startDate;
     newBookView.endDate = self.endDate;
     newBookView.selectedRoom = self.availableRooms[indexPath.row];

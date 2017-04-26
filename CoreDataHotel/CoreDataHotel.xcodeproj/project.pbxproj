@@ -113,18 +113,18 @@
 		71706A0F1EAE6D50007CA360 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				717069F71EAE5F1D007CA360 /* ViewController.h */,
-				717069F81EAE5F1D007CA360 /* ViewController.m */,
-				717746E11EAFBC8600FDD223 /* DatePickerViewController.h */,
-				717746E21EAFBC8600FDD223 /* DatePickerViewController.m */,
-				717746E71EB00ADB00FDD223 /* BookViewController.h */,
-				717746E81EB00ADB00FDD223 /* BookViewController.m */,
 				717746E41EAFCF8000FDD223 /* AvailabilityViewController.h */,
 				717746E51EAFCF8000FDD223 /* AvailabilityViewController.m */,
+				717746E71EB00ADB00FDD223 /* BookViewController.h */,
+				717746E81EB00ADB00FDD223 /* BookViewController.m */,
+				717746E11EAFBC8600FDD223 /* DatePickerViewController.h */,
+				717746E21EAFBC8600FDD223 /* DatePickerViewController.m */,
 				71706A141EAEA486007CA360 /* HotelsViewController.h */,
 				71706A151EAEA486007CA360 /* HotelsViewController.m */,
 				71706A171EAEA9FC007CA360 /* RoomsViewController.h */,
 				71706A181EAEA9FC007CA360 /* RoomsViewController.m */,
+				717069F71EAE5F1D007CA360 /* ViewController.h */,
+				717069F81EAE5F1D007CA360 /* ViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
