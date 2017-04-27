@@ -30,7 +30,7 @@
 @property(strong, nonatomic) NSArray *reservationDetails;
 @property(strong, nonatomic) UISearchBar *searchBar;
 @property(strong, nonatomic) NSArray *searchResult;
-@property(strong,nonatomic) NSMutableArray *filteredReservation;
+@property(strong, nonatomic) NSMutableArray *filteredReservation;
 
 @end
 

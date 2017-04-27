@@ -6,6 +6,8 @@
 //  Copyright © 2017 Brandon Little. All rights reserved.
 //
 
+@import Crashlytics;
+
 #import "ViewController.h"
 #import "AutoLayout.h"
 #import "HotelsViewController.h"
@@ -74,12 +76,15 @@
 }
 
 - (void)browseButtonSelected{
+    [Answers logCustomEventWithName:@"ViewController - Browse Button Pressed" customAttributes:nil];
+    
     HotelsViewController *newHotelsView = [[HotelsViewController alloc]init];
     
     [self.navigationController pushViewController:newHotelsView animated:YES];
 }
 
 - (void)bookButtonSelected{
+    [Answers logCustomEventWithName:@"ViewController - Book Button Pressed" customAttributes:nil];
     DatePickerViewController *newDatePickerView = [[DatePickerViewController alloc]init];
     
     [self.navigationController pushViewController:newDatePickerView animated:YES];
