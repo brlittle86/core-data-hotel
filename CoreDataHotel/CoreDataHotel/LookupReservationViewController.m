@@ -29,7 +29,7 @@
 @property(strong, nonatomic) UITableView *tableView;
 @property(strong, nonatomic) NSArray *reservationDetails;
 @property(strong, nonatomic) UISearchBar *searchBar;
-@property(strong, nonatomic) NSArray *searchResult;
+//@property(strong, nonatomic) NSArray *searchResult;
 @property(strong, nonatomic) NSMutableArray *filteredReservation;
 
 @end
@@ -114,9 +114,6 @@ BOOL isSearching;
     [AutoLayout trailingConstraintFrom:self.tableView toView:self.view];
     
     [AutoLayout constraintsWithVFLForViewDictionary:viewDictionary forMetricsDictionary:metricsDictionary withOptions:0 withVisualFormat:visualFormatString];
-    
-    [self.searchBar setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self.tableView setTranslatesAutoresizingMaskIntoConstraints:NO];
 
 }
 
