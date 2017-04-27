@@ -158,7 +158,6 @@ BOOL isSearching;
 //    [self.tableView reloadData];
 }
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    NSLog(@"Text change - %d",isSearching);
     isSearching = YES;
     if ([searchText isEqualToString:@""]) {
         isSearching = NO;
@@ -175,7 +174,6 @@ BOOL isSearching;
     [self.tableView reloadData];
     [searchBar resignFirstResponder];
     isSearching = NO;
-    NSLog(@"Cancel clicked");
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
@@ -184,12 +182,10 @@ BOOL isSearching;
     self.filteredReservation = [[self.reservationDetails filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"guest.lastName CONTAINS[c] %@ OR guest.firstName CONTAINS[c] %@", searchBar.text, searchBar.text]] mutableCopy];
     }
     isSearching = NO;
-    NSLog(@"Search Clicked");
 }
 
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
 {
     isSearching = NO;
-//    [self.tableView reloadData];
 }
 @end
