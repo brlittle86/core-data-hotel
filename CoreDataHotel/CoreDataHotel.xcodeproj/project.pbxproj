@@ -25,6 +25,7 @@
 		71D8C24A1EB2607700FEA1F3 /* MappingModel1.0-1.1.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 71D8C2491EB2607700FEA1F3 /* MappingModel1.0-1.1.xcmappingmodel */; };
 		71D8C24F1EB26E7000FEA1F3 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D8C24D1EB26E7000FEA1F3 /* Fabric.framework */; };
 		71D8C2501EB26E7000FEA1F3 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D8C24E1EB26E7000FEA1F3 /* Crashlytics.framework */; };
+		71D8C2531EB2A7F800FEA1F3 /* HotelServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D8C2521EB2A7F800FEA1F3 /* HotelServices.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		71D8C2491EB2607700FEA1F3 /* MappingModel1.0-1.1.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = "MappingModel1.0-1.1.xcmappingmodel"; sourceTree = "<group>"; };
 		71D8C24D1EB26E7000FEA1F3 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		71D8C24E1EB26E7000FEA1F3 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		71D8C2511EB2A7F800FEA1F3 /* HotelServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelServices.h; sourceTree = "<group>"; };
+		71D8C2521EB2A7F800FEA1F3 /* HotelServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelServices.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,8 @@
 		71706A0E1EAE6D44007CA360 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				71D8C2511EB2A7F800FEA1F3 /* HotelServices.h */,
+				71D8C2521EB2A7F800FEA1F3 /* HotelServices.m */,
 				717069F41EAE5F1D007CA360 /* AppDelegate.h */,
 				717069F51EAE5F1D007CA360 /* AppDelegate.m */,
 				71706A0B1EAE6D2C007CA360 /* AutoLayout.h */,
@@ -315,6 +320,7 @@
 				717746E91EB00ADB00FDD223 /* BookViewController.m in Sources */,
 				71706A161EAEA486007CA360 /* HotelsViewController.m in Sources */,
 				71706A191EAEA9FC007CA360 /* RoomsViewController.m in Sources */,
+				71D8C2531EB2A7F800FEA1F3 /* HotelServices.m in Sources */,
 				71D8C24A1EB2607700FEA1F3 /* MappingModel1.0-1.1.xcmappingmodel in Sources */,
 				717069F31EAE5F1D007CA360 /* main.m in Sources */,
 				71706A0D1EAE6D2C007CA360 /* AutoLayout.m in Sources */,
