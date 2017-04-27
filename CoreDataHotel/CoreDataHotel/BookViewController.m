@@ -10,7 +10,7 @@
 
 #import "BookViewController.h"
 #import "AutoLayout.h"
-#import "AppDelegate.h"
+#import "HotelServices.h"
 
 #import "Room+CoreDataClass.h"
 #import "Room+CoreDataProperties.h"
@@ -61,40 +61,14 @@
 
 - (void)doneButtonPressed{
     
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *context = appDelegate.persistentContainer.viewContext;
-    
-    Reservation *reservation = [NSEntityDescription insertNewObjectForEntityForName:@"Reservation" inManagedObjectContext:context];
-    
-    reservation.startDate = self.startDate;
-    reservation.endDate = self.endDate;
-    reservation.room = self.selectedRoom;
-    
-    self.selectedRoom.reservation = [self.selectedRoom.reservation setByAddingObject:reservation];
-    
-    reservation.guest = [NSEntityDescription insertNewObjectForEntityForName:@"Guest" inManagedObjectContext:context];
-    if (self.firstNameField.text != nil && self.lastNameField.text != nil) {
-        reservation.guest.firstName = self.firstNameField.text;
-        NSLog(@"%@", reservation.guest.firstName);
-        reservation.guest.lastName = self.lastNameField.text;
-        reservation.guest.email = self.emailField.text;
-    } else {
-        return NSLog(@"Name field was nil.");
-    }
-    
-    NSError *saveError;
-    [context save:&saveError];
-    
-    if (saveError) {
-        NSLog(@"Save error is %@", saveError);
-        NSDictionary *attributeDictionary = @{@"Save Error" : saveError.localizedDescription};
-        [Answers logCustomEventWithName:@"Save Reservation Error" customAttributes:attributeDictionary];
-    } else {
-        NSLog(@"Save reservation successful!");
-        [Answers logCustomEventWithName:@"Saved New Reservation" customAttributes:nil];
-        [self.navigationController popToRootViewControllerAnimated:YES];
-    }
-    
+    [HotelServices saveNewReservationInRoom:self.selectedRoom
+                                  startDate:self.startDate
+                                    endDate:self.endDate
+                                  firstName:self.firstNameField.text
+                                   lastName:self.lastNameField.text
+                                      email:self.emailField.text
+                    andNavigationController:self.navigationController];
+
 }
 
 - (void)setupTextFields{
