@@ -28,7 +28,7 @@
     NSArray *results = [appDelegate.persistentContainer.viewContext executeFetchRequest:request error:&roomError];
     
     if (roomError) {
-        NSLog(@"Error happened while retrieving all rooms from Core Date");
+        NSLog(@"Error happened while retrieving all rooms from Core Data");
     }
     
     NSMutableArray *unavailableRooms = [[NSMutableArray alloc]init];
