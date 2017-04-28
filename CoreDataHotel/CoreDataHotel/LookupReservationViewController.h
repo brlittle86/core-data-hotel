@@ -10,4 +10,6 @@
 
 @interface LookupReservationViewController : UIViewController
 
++(NSString *)getDateString:(NSDate *)date;
+
 @end

@@ -29,6 +29,7 @@
     DatePickerViewController *testDatePickerVC = [[DatePickerViewController alloc]init];
     
     XCTAssert(testDatePickerVC);
+    XCTAssertNotNil(testDatePickerVC.view);
     
 }
 

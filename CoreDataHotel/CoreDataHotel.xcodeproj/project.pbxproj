@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		713A92771EB2C82B009C2413 /* ViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A92761EB2C82B009C2413 /* ViewControllerTests.m */; };
+		713A92791EB2D015009C2413 /* LookupReservationViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A92781EB2D015009C2413 /* LookupReservationViewControllerTests.m */; };
 		717069F31EAE5F1D007CA360 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 717069F21EAE5F1D007CA360 /* main.m */; };
 		717069F61EAE5F1D007CA360 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 717069F51EAE5F1D007CA360 /* AppDelegate.m */; };
 		717069F91EAE5F1D007CA360 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717069F81EAE5F1D007CA360 /* ViewController.m */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		713A92761EB2C82B009C2413 /* ViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewControllerTests.m; path = ../CoreDataHotel/ViewControllerTests.m; sourceTree = "<group>"; };
+		713A92781EB2D015009C2413 /* LookupReservationViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookupReservationViewControllerTests.m; sourceTree = "<group>"; };
 		717069EE1EAE5F1D007CA360 /* CoreDataHotel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataHotel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		717069F21EAE5F1D007CA360 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		717069F41EAE5F1D007CA360 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				717746F81EB1145500FDD223 /* AutoLayoutTests.m */,
 				71D8C2581EB2C4AF00FEA1F3 /* DatePickerViewControllerTests.m */,
 				713A92761EB2C82B009C2413 /* ViewControllerTests.m */,
+				713A92781EB2D015009C2413 /* LookupReservationViewControllerTests.m */,
 			);
 			path = CoreDataHotelTests;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				713A92771EB2C82B009C2413 /* ViewControllerTests.m in Sources */,
 				71D8C2591EB2C4AF00FEA1F3 /* DatePickerViewControllerTests.m in Sources */,
 				717746F91EB1145500FDD223 /* AutoLayoutTests.m in Sources */,
+				713A92791EB2D015009C2413 /* LookupReservationViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
